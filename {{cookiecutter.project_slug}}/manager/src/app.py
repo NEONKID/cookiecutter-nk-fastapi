@@ -3,11 +3,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import ORJSONResponse
 from loguru import logger
 
-from shared.errors import init_error_handler
+from shared.errors.handler import init_error_handler
 from shared.middlewares import add_middlewares
 from shared.routes import add_routes
 
-from manager.containers import Container
+from manager.src.containers import Container
 
 
 def create_app():
