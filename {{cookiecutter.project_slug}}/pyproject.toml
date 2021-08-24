@@ -5,7 +5,7 @@ description = ""
 authors = ["{{cookiecutter.project_author_name}} <{{cookiecutter.project_author_email}}>"]
 
 [tool.poetry.dependencies]
-python = "^{{cookiecutter.project_language}}"
+python = "^{{cookiecutter.project_python_version}}"
 fastapi = "^0.68.0"
 uvicorn = {extras = ["standard"], version = "^0.15.0"}
 dependency-injector = "^4.35.2"

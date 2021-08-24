@@ -3,7 +3,7 @@
     "project_name": "Base Project",
     "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
     "project_short_description": "base project description..",
-    "project_language": "Choose Python's languages.",
+    "project_python_version": "Choose Python version..",
     "project_author_name": "Neon K.I.D",
     "project_author_email": "contact@neonkid.xyz"
 }

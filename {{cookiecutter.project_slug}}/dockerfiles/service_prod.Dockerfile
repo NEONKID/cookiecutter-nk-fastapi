@@ -1,4 +1,4 @@
-FROM python:{{cookiecutter.project_language}}-slim
+FROM python:{{cookiecutter.project_python_version}}-slim
 MAINTAINER {{cookiecutter.project_author_name}}
 
 RUN pip install poetry
