@@ -12,7 +12,7 @@ def init_error_handler(app: FastAPI):
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             content={
                 'title': type(exc).__name__,
-                'description': str(exc) + ', Contact me (saint@buzzni.com)'
+                'description': str(exc) + ', Contact me ({{cookiecutter.project_author_email}})'
             }
         )
 
