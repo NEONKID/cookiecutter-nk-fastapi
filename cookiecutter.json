@@ -1,9 +1,8 @@
-
 {
     "project_name": "Base Project",
     "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
     "project_short_description": "base project description..",
-    "project_python_version": "Choose Python version..",
+    "project_python_version": "3.8.10",
     "project_author_name": "Neon K.I.D",
     "project_author_email": "contact@neonkid.xyz"
 }
