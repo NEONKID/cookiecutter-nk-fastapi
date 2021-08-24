@@ -2,7 +2,7 @@
 
 Neon K.I.D가 직접 작성한 FastAPI 프로젝트 템플릿이다. 이 프로젝트 템플릿은 Micro REST Framework에 적합하다.
 
-
+<br />
 
 ## How to use
 
