@@ -1,5 +1,5 @@
-# FROM python:3.8.5-slim
-# MAINTAINER Saint
+FROM python:{{cookiecutter.project_language}}-slim
+MAINTAINER {{cookiecutter.project_author_name}}
 
 RUN pip install poetry
 RUN poetry config virtualenvs.create false
