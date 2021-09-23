@@ -13,6 +13,6 @@ ENV TZ=Asia/Seoul
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 COPY ./service ./service
-COPY ./shared ./shared
+COPY ./common ./common
 
 CMD ["gunicorn", "-b", "0.0.0.0:80", "-w", "1", "-k", "worker.uvicorn.AppWorker", "service.src.app:create_app()", "--access-logfile", "-"]

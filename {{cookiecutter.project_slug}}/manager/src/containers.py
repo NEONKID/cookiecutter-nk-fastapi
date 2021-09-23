@@ -1,9 +1,9 @@
-from dependency_injector.containers import DeclarativeContainer
+from dependency_injector.containers import copy
 from dependency_injector.providers import Configuration, Singleton, Factory
 
-from common.config import ApplicationSettings
+from common.containers import BaseContainer
 
 
-class Container(DeclarativeContainer):
-    config = Configuration()
-    config.from_pydantic(ApplicationSettings())
+@copy(BaseContainer)
+class Container(BaseContainer):
+    ...

@@ -27,14 +27,14 @@ class UnsupportedMediaTypeException(HTTPException):
         super(UnsupportedMediaTypeException, self).__init__(status_code=415)
 
 
-class ForbiddenException(HTTPException):
-    def __init__(self):
-        super(ForbiddenException, self).__init__(status_code=403)
+class ForbiddenException(DefaultChapterException):
+    def __init__(self, title: str, desc: str):
+        super(ForbiddenException, self).__init__(title=title, desc=desc, status_code=403)
 
 
-class NotFoundException(HTTPException):
-    def __init__(self):
-        super(NotFoundException, self).__init__(status_code=404)
+class NotFoundException(DefaultChapterException):
+    def __init__(self, title, desc):
+        super(NotFoundException, self).__init__(title=title, desc=desc, status_code=404)
 
 
 class ConflictException(DefaultChapterException):

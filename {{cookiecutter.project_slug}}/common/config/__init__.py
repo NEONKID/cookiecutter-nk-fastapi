@@ -1,7 +1,8 @@
 from enum import Enum
-from pydantic import BaseSettings, Field
+from pydantic import Field
 
-from shared.config.cors import CORSSettings
+from common.config.base import BaseSettings
+from common.config.cors import CORSSettings
 
 
 class ApplicationEnvironment(str, Enum):

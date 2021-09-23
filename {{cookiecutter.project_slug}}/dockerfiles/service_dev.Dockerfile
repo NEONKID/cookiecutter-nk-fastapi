@@ -13,6 +13,6 @@ ENV TZ=Asia/Seoul
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 COPY ./service ./service
-COPY ./shared ./shared
+COPY ./common ./common
 
-CMD ["uvicorn", "service.src.app:create_app()", "--host=0.0.0.0", "--port=80"]
+CMD ["uvicorn", "service.src.asgi:api", "--host=0.0.0.0", "--port=80"]
