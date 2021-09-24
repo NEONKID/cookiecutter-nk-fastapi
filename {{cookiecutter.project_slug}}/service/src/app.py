@@ -7,6 +7,7 @@ from pydantic import EmailStr
 from common.errors.handler import init_error_handler
 from common.middlewares import add_middlewares
 from common.routes import add_routes
+from common.utils.api.template import choose_template
 
 from service.src.containers import Container
 
@@ -24,7 +25,7 @@ def create_app(create_db: bool = False):
         description="{{cookiecutter.project_short_description}} 서비스 API",
         docs_url=None,
         redoc_url=None,
-        responses={415: {}},
+        responses=choose_template([422, 500]),
     )
     app.container = container
     db = container.db()
